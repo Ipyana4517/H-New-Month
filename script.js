@@ -35,11 +35,11 @@ function createBubbles() {
 
 // Motivational Speeches
 const speeches = {
-    motivational: "Hey beautiful! 💖 You've come so far, and I'm so proud of you! This month is going to be your month. Believe in yourself because I believe in you. You are stronger than your doubts, braver than your fears, and more capable than you can possibly imagine. Go out there and show the world what you're made of! You've got this! 💪✨",
+    motivational: "Hey beautiful! 💖 You've come so far, and I'm so proud of you! This month is going to be your month. Believe in yourself because I believe in you. You are stronger than your doubts, smarter than your fears, and more capable than you know. Take care of yourself, stay positive, and remember—you've already overcome so much. This is YOUR time to shine! 🌟 Go out there and show the world what you're made of!",
     
-    examTips: "Here are your winning exam strategies: 📚\n\n1. Start your day with a positive mindset - YOU CAN DO THIS!\n2. Take deep breaths when stressed - calm mind, clear thoughts\n3. Read questions carefully - don't rush\n4. Manage your time wisely - prioritize\n5. Trust your preparation - you've studied hard\n6. Stay hydrated and take short breaks\n7. Remember: one question at a time, one step at a time\n\nYou've prepared for this. Now go ace it! 🎯✨",
+    examTips: "Here are your winning exam strategies: 📚\n\n1. Start your day with a positive mindset - YOU CAN DO THIS!\n2. Take deep breaths when stressed - calm mind, clear thoughts\n3. Read each question carefully twice before answering\n4. Manage your time - don't spend too long on one question\n5. Skip difficult questions and come back to them\n6. Review your answers before submitting\n7. Remember: You've studied hard, trust yourself! 💪\n\nGo ace that exam! You're ready! 🎓",
     
-    wisdomQuote: "\"Success is not final, failure is not fatal: it is the courage to continue that counts.\" - Winston Churchill\n\nYour journey through these exams is a testament to your dedication. Every challenge you overcome makes you stronger, wiser, and more resilient. This month, embrace every moment - the stress, the studying, the late nights - because they're all stepping stones to your success. You are destined for greatness! 🌟💫"
+    wisdomQuote: "\"Success is not final, failure is not fatal: it is the courage to continue that counts.\" - Winston Churchill\n\nYour journey through these exams is a testament to your dedication and perseverance. Every challenge you face is making you stronger. Remember, this is not the end—it's just the beginning of your success story. Embrace the struggle, celebrate your efforts, and know that you are destined for greatness! ✨"
 };
 
 // Display speech
