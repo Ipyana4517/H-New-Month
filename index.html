@@ -3,247 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy New Month 🌸</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #ffd6e8 0%, #ffb3d9 25%, #ffc0e3 50%, #ffb3d9 75%, #ffd6e8 100%);
-            font-family: 'Arial', sans-serif;
-            cursor: pointer;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .container {
-            text-align: center;
-            z-index: 10;
-            position: relative;
-        }
-
-        h1 {
-            font-size: 4rem;
-            color: #ff1493;
-            text-shadow: 2px 2px 4px rgba(255, 20, 147, 0.3);
-            margin-bottom: 1rem;
-            animation: float 3s ease-in-out infinite;
-            font-weight: bold;
-        }
-
-        .subtitle {
-            font-size: 1.5rem;
-            color: #ff69b4;
-            margin-bottom: 2rem;
-            animation: fade-in 2s ease-in-out infinite;
-        }
-
-        .instruction {
-            font-size: 1.2rem;
-            color: #ff1493;
-            margin-top: 2rem;
-            opacity: 0.8;
-            animation: pulse 1.5s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-
-        @keyframes fade-in {
-            0%, 100% { opacity: 0.7; }
-            50% { opacity: 1; }
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        .firework {
-            position: fixed;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            pointer-events: none;
-        }
-
-        .flower {
-            position: fixed;
-            font-size: 2rem;
-            pointer-events: none;
-            z-index: 20;
-        }
-
-        /* Decorative flowers around the page */
-        .bg-flower {
-            position: absolute;
-            font-size: 3rem;
-            opacity: 0.3;
-            z-index: 1;
-        }
-
-        .flower1 { top: 5%; left: 10%; }
-        .flower2 { top: 15%; right: 10%; }
-        .flower3 { bottom: 10%; left: 15%; }
-        .flower4 { bottom: 15%; right: 12%; }
-        .flower5 { top: 50%; left: 5%; }
-        .flower6 { top: 50%; right: 5%; }
-    </style>
+    <title>Happy New Month & Good Luck in Exams! 🎉</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="bg-flower flower1">🌸</div>
-    <div class="bg-flower flower2">🌺</div>
-    <div class="bg-flower flower3">🌷</div>
-    <div class="bg-flower flower4">🌹</div>
-    <div class="bg-flower flower5">💐</div>
-    <div class="bg-flower flower6">🌼</div>
-
+    <div class="stars"></div>
+    <div class="bubbles"></div>
+    
     <div class="container">
-        <h1>🌸 Happy New Month 🌸</h1>
-        <p class="subtitle">✨ Let's celebrate in style ✨</p>
-        <p class="instruction">🎉 Click anywhere to celebrate! 🎉</p>
+        <header>
+            <h1 class="title">✨ Happy New Month ✨</h1>
+            <p class="subtitle">Wishing you success and joy in all your endeavors!</p>
+        </header>
+
+        <main>
+            <section class="greeting-section">
+                <div class="greeting-card">
+                    <h2>🎓 Best of Luck in Your Exams! 🎓</h2>
+                    <p>You've got this! Trust in your preparation and believe in yourself.</p>
+                </div>
+            </section>
+
+            <section class="buttons-section">
+                <div class="button-group">
+                    <button class="speech-btn" onclick="playMotivationalSpeech()">
+                        💬 Motivational Speech
+                    </button>
+                    <button class="speech-btn" onclick="playExamTips()">
+                        📚 Exam Tips
+                    </button>
+                    <button class="speech-btn" onclick="playWisdomQuote()">
+                        💭 Wisdom Quote
+                    </button>
+                    <button class="speech-btn" onclick="triggerFireworks()">
+                        🎆 Fireworks & Celebration
+                    </button>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <div id="speech-display" class="speech-display hidden">
+                    <p id="speech-text"></p>
+                </div>
+            </section>
+
+            <section class="messages-section">
+                <div class="message-card pink">
+                    <h3>✨ This Month is Yours ✨</h3>
+                    <p>Embrace the new opportunities and make the most of every moment. You are capable of amazing things!</p>
+                </div>
+                <div class="message-card purple">
+                    <h3>💪 Believe in Yourself 💪</h3>
+                    <p>Every challenge is an opportunity to grow. You are stronger than you think. Go and conquer those exams!</p>
+                </div>
+                <div class="message-card coral">
+                    <h3>🌟 Shine Bright 🌟</h3>
+                    <p>Your hard work will pay off. Stay positive, stay focused, and remember—you are destined for greatness!</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>✨ May this month bring you joy, success, and endless possibilities! ✨</p>
+        </footer>
     </div>
 
-    <script>
-        const colors = ['#ff1493', '#ff69b4', '#ffb6c1', '#ffc0cb', '#ffa6d6', '#ff85c0', '#ff6eb4', '#ff55a0'];
-        const flowers = ['🌸', '🌺', '🌷', '🌹', '💐', '🌼', '🎀', '💕'];
+    <!-- Fireworks Container -->
+    <div id="fireworks-container"></div>
 
-        function createFirework(x, y) {
-            const particleCount = 50;
-            const particles = [];
-
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'firework';
-                particle.style.left = x + 'px';
-                particle.style.top = y + 'px';
-                particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-
-                const angle = (Math.PI * 2 * i) / particleCount;
-                const velocity = 5 + Math.random() * 8;
-                const vx = Math.cos(angle) * velocity;
-                const vy = Math.sin(angle) * velocity;
-
-                let posX = x;
-                let posY = y;
-                let life = 1;
-                const decay = 0.015;
-
-                document.body.appendChild(particle);
-
-                function animate() {
-                    posX += vx;
-                    posY += vy;
-                    vy += 0.2; // gravity
-
-                    particle.style.left = posX + 'px';
-                    particle.style.top = posY + 'px';
-                    particle.style.opacity = life;
-
-                    life -= decay;
-
-                    if (life > 0) {
-                        requestAnimationFrame(animate);
-                    } else {
-                        particle.remove();
-                    }
-                }
-
-                animate();
-                particles.push(particle);
-            }
-        }
-
-        function createFlower(x, y) {
-            const flower = document.createElement('div');
-            flower.className = 'flower';
-            flower.textContent = flowers[Math.floor(Math.random() * flowers.length)];
-            flower.style.left = x + 'px';
-            flower.style.top = y + 'px';
-            flower.style.opacity = 1;
-            flower.style.transform = 'scale(0.5)';
-
-            document.body.appendChild(flower);
-
-            let posX = x;
-            let posY = y;
-            let rotation = Math.random() * 360;
-            let scale = 0.5;
-            let opacity = 1;
-
-            function animate() {
-                posY -= 2;
-                rotation += 5;
-                scale += 0.02;
-                opacity -= 0.02;
-
-                flower.style.top = posY + 'px';
-                flower.style.transform = `scale(${scale}) rotate(${rotation}deg)`;
-                flower.style.opacity = opacity;
-
-                if (opacity > 0) {
-                    requestAnimationFrame(animate);
-                } else {
-                    flower.remove();
-                }
-            }
-
-            animate();
-        }
-
-        document.body.addEventListener('click', function(event) {
-            const x = event.clientX;
-            const y = event.clientY;
-
-            // Create multiple fireworks
-            for (let i = 0; i < 3; i++) {
-                setTimeout(() => {
-                    createFirework(x + (Math.random() - 0.5) * 100, y + (Math.random() - 0.5) * 100);
-                }, i * 100);
-            }
-
-            // Create flowers
-            for (let i = 0; i < 5; i++) {
-                setTimeout(() => {
-                    createFlower(
-                        x + (Math.random() - 0.5) * 150,
-                        y + (Math.random() - 0.5) * 150
-                    );
-                }, i * 50);
-            }
-
-            // Sound effect (optional)
-            playSound();
-        });
-
-        // Simple beep sound effect
-        function playSound() {
-            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-            const oscillator = audioContext.createOscillator();
-            const gainNode = audioContext.createGain();
-
-            oscillator.connect(gainNode);
-            gainNode.connect(audioContext.destination);
-
-            oscillator.frequency.value = 800 + Math.random() * 400;
-            oscillator.type = 'sine';
-
-            gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
-            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
-
-            oscillator.start(audioContext.currentTime);
-            oscillator.stop(audioContext.currentTime + 0.1);
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
